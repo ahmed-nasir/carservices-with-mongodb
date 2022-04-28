@@ -5,7 +5,7 @@ const AddService = () => {
     const { register, handleSubmit } = useForm();
     const onSubmit = data => {
         console.log(data)
-        const url = `http://localhost:5000/service`
+        const url = `https://frozen-temple-37604.herokuapp.com/service`
         fetch(url, {
             method: 'POST',
             headers: {
@@ -16,6 +16,7 @@ const AddService = () => {
         .then(res=>res.json())
         .then(result=>{
             console.log(result)
+            // reset input field
         })
     };
     return (

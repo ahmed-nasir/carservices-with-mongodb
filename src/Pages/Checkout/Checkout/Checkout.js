@@ -22,7 +22,7 @@ const Checkout = () => {
             phone:event.target.phone.value
 
         }
-        axios.post('http://localhost:5000/order',order)
+        axios.post('https://frozen-temple-37604.herokuapp.com/order',order)
         .then(response=>{
             const {data}=response;
             if(data.insertedId){
